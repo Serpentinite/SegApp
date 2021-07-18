@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div>
+    <h3>インスタンスセグメンテーション</h3>
+    <p>このアプリケーションはMaskRCNNモデルのDemoを誰でも簡単に試せるように作ったアプリケーションです。<br>
+        ぜひ<a href="{% url 'app:home' %}">Demo</a>を試してみてください。
+    </p>
+    <p>MaskRCNNは一般物体検出とSegmentationを同時に行うマルチタスクな手法です。<br>
+        そして、インスタンスセグメンテーション(Instance Segmentation)は画像のピクセルを
+        「どの物体クラス(カテゴリー)に属するか、どのインスタンスに属するか」で分類するタスクのことです。
+    </p>
+    <div class="center">
+    <img src="/media/images/family-6398107_640.jpg" alt="">
+    <p>
+    <a href="https://pixabay.com/ja/users/chillla70-22422106/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6398107">Charles McArthur</a>による<a href="https://pixabay.com/ja/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6398107">Pixabay</a>からの640×427の画像
+    をお試しください</p>
+    <p><img src="/media/images/result.jpg" alt=""><br>このように表示されます</p>
+    </div>
+    <p><a href="https://arxiv.org/abs/1703.06870">参考文献(MaskRCNN論文)</a></p>
+    <h3>QuizApp</h3>
+    <p class="footer">QuizAppは初めて作ったアプリケーションです。<br>
+    こちらもぜひ訪れてみてください。</p>
+</div>
+<script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+{% endblock %}

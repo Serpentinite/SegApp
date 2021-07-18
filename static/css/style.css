@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/*　全てのWEBページに適用される　*/
+html{
+  font-family: sans-serif;
+}
+html * {
+  box-sizing: border-box;
+}
+.wrapper{
+    margin: 0 auto 0 auto;
+    max-width: 1400px;
+}
+/* header */
+header{
+    padding-top: 0;
+    box-sizing: border-box;
+  }
+h2{
+    color:#e0d996;
+    border-bottom: 3px dotted #e0d996;
+    margin: 20px 0 20px 0;
+    padding: 5px;
+}
+h3{
+  margin: 50px 0 10px 0;
+  color: #d8ce76;
+  border-bottom: 1px solid #d8ce76;
+  font-size: 160%;
+}
+.center{
+    text-align: center;
+    font-size: large;
+}
+p{
+    line-height: 1.6;
+}
+a{
+    text-decoration: none;
+}
+footer{
+    margin: auto;
+}
+.box9 {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #ff7d6e;
+  background: #ffebe9;
+  border-top: solid 10px #ff7d6e;
+  text-align: center;
+  font-size: large;
+}
+.box9 p {
+  margin: 0; 
+  padding: 0;
+}
+.footer {
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 640px){
+  .tbl-r th{
+    display: block;
+    width: 100%;
+    border-bottom-width: thin;
+  }
+  .tbl-r td {
+    display: block;
+    width: 100%;
+    border-bottom-width: thin;
+  }
+}

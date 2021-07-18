@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+ <h3>インスタンスセグメンテーション</h3>   
+  <h2 class="center">RESULT</h2>
+   <table class="table table-sm center tbl-r">
+    <tbody>
+      <tr>
+        <th>ファイル名</th>
+        <td>{{ photo_name }}</td>
+      </tr>
+      <tr>
+        <th>画像ファイル</th>
+        <td><img class='preview-img' src={{ photo_data }} ></img></td>
+      </tr>
+      <tr>
+        <th>推定結果</th>
+        <td><img class='preview-img' src={{ result_img }} ></img></td>
+      </tr>
+    </tbody>
+  </table>
+  <a class="btn btn-success footer" href="{% url 'app:home' %}">画像選択画面に戻る</a>
+</div>
+{% endblock %}

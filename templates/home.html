@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div>
+    <h3>インスタンスセグメンテーション</h3>
+    <p>画像ファイルを選択して推定ボタンをクリックしてください。</p>
+    <form name="addForm" action="{% url 'app:instance' %}" method="post" class="form" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <div class="custom-file">
+                {{ form.image }}
+                <label class="custom-file-label" for="customFile">
+                    推定したいファイルを選択してください。
+                </label>
+        </div>
+    </div>
+    <input type="submit" value="推定する" onclick="Form_Submit()" class="btn btn-primary">
+    <div id="Loading" style="display:none" class="box9">
+        <img src="static/images/Loading.gif" class="loading">
+        <p class="loadsmg">
+            処理中...<br>
+            しばらくお待ちください。
+        </p>
+    </div>
+    </form> 
+</div>
+<script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+{% endblock %}
